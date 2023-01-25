@@ -30,12 +30,11 @@ internal class MarsRoverControllerTest {
     private val objectMapper = jacksonObjectMapper()
 
    @Test
-   @DisplayName("/POST returns final position when 200")
-   fun post() {
+   fun `POST returns final position when 200`() {
        val form = FormDto.createForm("10","10","1","3", "N","FFFFF")
        val finalPosition = PositionDto.createPosition("6","3")
-
        every { marsRoverService.calculateMarsRoverPosition() } returns finalPosition
+
 
        mockMvc.post("/mars-rover/finalPosition") {
            contentType = MediaType.APPLICATION_JSON

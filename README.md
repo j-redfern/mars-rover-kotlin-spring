@@ -8,4 +8,5 @@ MockK\
 Kotlin\
 Spring\
 Junit5\
-Gradle
+Gradle\
+kotlinx-serialization
